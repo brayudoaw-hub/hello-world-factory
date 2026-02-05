@@ -19,8 +19,8 @@ app.get("/health", (req, res) => {
   res.json({ status: "healthy", service: "hello-world-factory-backend" });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Backend server running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Backend server running on http://0.0.0.0:${PORT}`);
   console.log(`📊 Health check: http://localhost:${PORT}/health`);
   console.log(`👋 Hello endpoint: http://localhost:${PORT}/hello`);
 });
